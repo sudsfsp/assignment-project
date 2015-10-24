@@ -75,10 +75,10 @@ samsungData <- melt(finalData, id.vars = c("subjectID", "activityID")) %>%
                      dcast(subjectID + activityID ~ variable,fun.aggregate = mean, na.rm=TRUE)
 
 ## Example : sumsungData [1:5,1:5]
-## subjectID     activityID         tBodyAccmeanX        tBodyAccmeanY         tBodyAccmeanZ
-##         1          walking              0.2773308              -0.017383819               -0.1111481
-##         1   walkingUpstairs        0.2554617               -0.023953149              -0.0973020
-##         1  walkingDownstairs    0.2891883              -0.009918505                -0.1075662
-##         1          sitting                 0.2612376              -0.001308288               -0.1045442
-##         1         standing             0.2789176               -0.016137590               -0.1106018
+## subjectID       activityID tBodyAccmeanX tBodyAccmeanY tBodyAccmeanZ
+##         1          walking     0.2773308  -0.017383819    -0.1111481
+##        1  walkingUpstairs     0.2554617  -0.023953149    -0.0973020
+##         1 walkingDownstair     0.2891883  -0.009918505    -0.1075662
+##        1          sitting     0.2612376  -0.001308288    -0.1045442
+##        1         standing     0.2789176  -0.016137590    -0.1106018
 
