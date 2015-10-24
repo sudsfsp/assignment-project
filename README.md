@@ -26,10 +26,11 @@ In starting, script need to load all libraries for running code smoothly. I have
 
 **Read Dataset:**
         
--	 After unzip dataset.zip file in working directory with help of unzip () function, You will see a dataset folder and there are many files are available but our aim is merge testing and training text files so we choose train and test folder for performing our operation. 
--	I have read text data with the help fread () function (data.table package) because it’s fast to read big dataset.
--	Read x_train, subject_train, y_train text files from training folder and assign into xtrain and subjectID, activityId object respectivily.         
--	Read  x_test, subject_test, y_test text files from testing folder and assign into xtes and subjectID, activityId object respectivily.     
+ -  After unzip dataset.zip file in working directory with help of unzip () function, You will see a dataset folder and there are many files are available but our aim is merge testing and training text files so we choose train and test folder for performing our operation. 
+ - I have read text data with the help fread () function (data.table package) because it’s fast to read big dataset.
+ - Read x_train, subject_train, y_train text files from training folder and assign into xtrain and subjectID, activityId object respectivily.                       
+ - Read  x_test, subject_test, y_test text files from testing folder and assign into xtes and subjectID, activityId object respectivily.      
+ - Original information of all text files , See Codebook.md   
 
 **Merge Dataset:**
 

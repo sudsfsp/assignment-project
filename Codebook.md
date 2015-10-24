@@ -1,14 +1,13 @@
 
-### Project Discription
+### Project Description
 
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually.The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
-
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (**walking,** **walkingUpstairs**, **walkingDownstairs**, **sitting,** **standing**, **laying**) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually.The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
 ### Variable Description
 
 The variable selected for this dataset come from the accelerometer from the Samsung Galaxy S Smartphone. The time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz.
 
-**1.  subjectID:** The class of variable is numeric. Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.  
+**1.  subjectID:** The class of variable is integer. Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.  
 **2. activityID:**  The variable was coded as factor and represent as class labels with their activity name.  
 **3. tBodyAcc-XYZ:**  The class of variable is numeric. In this variable name has 4 level: Time - Body- Acceleration- 3-axial signal.  
 **4. tGravityAcc-XYZ:** The class of variable is numeric. In this variable name has 4 level: Time -Gravity - Acceleration- 3-axial signal.  
@@ -39,11 +38,9 @@ The variable selected for this dataset come from the accelerometer from the Sams
 
 ###Notes on the original (raw) data 
 
-[Company site][2]  A full description is available at the site where the data was obtained.
+[Company site][2]  A full description is available at the site where the data was obtained.       
 
-###Creating the tidy datafile
-
-###Guide to create the tidy data file
+### Way of create the dataset in working directory
  1. Download zip file from above link with help of download.file () function.
  2. Unzip file with unzip () function and set directory in working directory.
 
@@ -59,7 +56,7 @@ The variable selected for this dataset come from the accelerometer from the Sams
 
 - 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
-##Description of the variables in the tinyData.txt file
+###Description of the variables in the tinyData.txt file
  **- Dimension :**180 observation of 68 variable.    
  **-  Format :**The format of dataset is wide because every variable column is unique and give specific information.     
  - There are 30 subject who carried out the experiment in first column.

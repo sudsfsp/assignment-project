@@ -1,5 +1,4 @@
 
-
 ## This code work as install automatically required package for run below code smoothly 
 
 list.of.packages <- c("dplyr", "data.table", "reshape2")
@@ -12,7 +11,7 @@ library (dplyr)
 library (data.table)
 library (reshape2)
 
-## Reading raw data files
+## Reading training raw data files
 
 xtrain <- fread ("./dataset/UCI HAR Dataset/train/X_train.txt")
 activityID <- fread ("./dataset/UCI HAR Dataset/train/y_train.txt")
@@ -20,6 +19,8 @@ subjectID <-  fread ("./dataset/UCI HAR Dataset/train/subject_train.txt")
 training <- bind_cols(subjectID, activityID )
 
 names(training)[1:2] <- c("subjectID", "activityID") ## naming the column name explicitly 
+
+## Reading testing raw data files
 
 xtest <- fread ("./dataset/UCI HAR Dataset/test/X_test.txt")
 activity <- fread ("./dataset/UCI HAR Dataset/test/y_test.txt")
@@ -63,7 +64,7 @@ names(NewDataMerge)[1:66] <-  gsub("[[:punct:]]","" , names(NewDataMerge))
 
 mergeActivity$activityID <- factor(mergeActivity$activityID, levels = c(1:6),
                                    labels = c("walking", "walkingUpstairs",
-                                                    "walkingDownstair","sitting",
+                                                    "walkingDownstairs","sitting",
                                                     "standing","laying" ))
 
 finalData <- bind_cols(mergeActivity, NewDataMerge)
@@ -72,4 +73,12 @@ finalData <- bind_cols(mergeActivity, NewDataMerge)
  
 samsungData <- melt(finalData, id.vars = c("subjectID", "activityID")) %>% 
                      dcast(subjectID + activityID ~ variable,fun.aggregate = mean, na.rm=TRUE)
+
+## Example : sumsungData [1:5,1:5]
+## subjectID     activityID         tBodyAccmeanX        tBodyAccmeanY         tBodyAccmeanZ
+##         1          walking              0.2773308              -0.017383819               -0.1111481
+##         1   walkingUpstairs        0.2554617               -0.023953149              -0.0973020
+##         1  walkingDownstairs    0.2891883              -0.009918505                -0.1075662
+##         1          sitting                 0.2612376              -0.001308288               -0.1045442
+##         1         standing             0.2789176               -0.016137590               -0.1106018
 
