@@ -36,7 +36,7 @@ The variable selected for this dataset come from the accelerometer from the Sams
 ####Collection of the raw data    
 [dataset.zip][1] You can download zip file from this link.
 
-###Notes on the original (raw) data 
+#### Original (raw) data 
 
 [Company site][2]  A full description is available at the site where the data was obtained.       
 
@@ -56,11 +56,12 @@ The variable selected for this dataset come from the accelerometer from the Sams
 
 - 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
-###Description of the variables in the tinyData.txt file
- **- Dimension :**180 observation of 68 variable.    
- **-  Format :**The format of dataset is wide because every variable column is unique and give specific information.     
+###Description of the variables in the tinyData.txt file   
+
+ - Dimension : 180 observation of 68 variable.    
+ -  Format : The format of dataset is wide because every variable column is unique and give specific information.     
  - There are 30 subject who carried out the experiment in first column.
- - A 66-feature vector with time and frequency domain variables (not including subjectId and activityID). 
+ - A 66-feature vector with time and frequency domain variables (not including subjectID and activityID). 
 
 
   [1]: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip

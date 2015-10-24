@@ -22,22 +22,22 @@ In starting, script need to load all libraries for running code smoothly. I have
  - data.table       
  - reshape2                                                            
 
- You can see original and download zip file link related raw dataset in Codebook.md file. I wrote some few steps in script file and these steps start from Read, merging data set, subsetting and extracting , cleaning and filtering duplicity,  transforming and lastly make pure tidy data set for ready to analysis. I have described above some underline principle of tidy data. Here, I briefly describe how these steps related to each other and these are:
+ You can see original and download zip file link related raw dataset in Codebook.md file. I wrote some few steps in script file and these steps start from Read, merging data set, subsetting and extracting , cleaning and filtering duplicity,  transforming and lastly make pure tidy data set for ready to analysis. I have described above some underline principle of tidy data. Here, I briefly describe how these steps related to each other and these are:    
 
 **Read Dataset:**
         
  -  After unzip dataset.zip file in working directory with help of unzip () function, You will see a dataset folder and there are many files are available but our aim is merge testing and training text files so we choose train and test folder for performing our operation. 
  - I have read text data with the help fread () function (data.table package) because it’s fast to read big dataset.
  - Read x_train, subject_train, y_train text files from training folder and assign into xtrain and subjectID, activityId object respectivily.                       
- - Read  x_test, subject_test, y_test text files from testing folder and assign into xtes and subjectID, activityId object respectivily.      
- - Original information of all text files , See Codebook.md   
+ - Read  x_test, subject_test, y_test text files from testing folder and assign into xtes and subjectID, activityId object respectivily.          
 
 **Merge Dataset:**
 
--	After read data, I use bind_cols (dplyr package) and rbind () for merging dataset. 
--	Merge subject_test with y_train txt file together and assign to training object. Merge subject_test and y_test together and assign to testing object. I merge again testing and training object into mergeActivity object. 
--	Merge x_train and x_test file together according to rows and assign to mergeData.
--	I use variable name contain in feature.txt file as a column name of mergeData. I use rbind () function for performing this step. 
+ - After read data, I use bind_cols (dplyr package) and rbind () for merging dataset. 
+ - Merge subject_test with y_train txt file together and assign to training object. Merge subject_test and y_test together and assign to testing object. I merge again testing and training object into mergeActivity object. 
+ - Merge x_train and x_test file together according to rows and assign to mergeData.
+ - I use variable name contain in feature.txt file as a column name of mergeData. I use rbind () function for performing this step.       
+ - Original information of all text files , See Codebook.md    
 
 **Cleaning dataset:**
 
