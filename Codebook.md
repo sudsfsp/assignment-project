@@ -1,6 +1,12 @@
-## Variable Description
 
-The variable selected for this dataset come from the accelerometer from the Samsung Galaxy S smartphone. The time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz.
+### Project Discription
+
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually.The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+
+
+### Variable Description
+
+The variable selected for this dataset come from the accelerometer from the Samsung Galaxy S Smartphone. The time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz.
 
 **1.  subjectID:** The class of variable is numeric. Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.  
 **2. activityID:**  The variable was coded as factor and represent as class labels with their activity name.  
@@ -26,31 +32,40 @@ The variable selected for this dataset come from the accelerometer from the Sams
  **19. fBodyGyroJerkMag:** The class of variable is numeric. In this variable name has 5 level: Frequency -Body - Gyroscope-Jerk- Magnitude.
   
 
-##Study design and data processing
+###Study design and data processing
 
-###Collection of the raw data    
-[dataset.zip][1]
+####Collection of the raw data    
+[dataset.zip][1] You can download zip file from this link.
 
-### Original (raw) data    
+###Notes on the original (raw) data 
 
 [Company site][2]  A full description is available at the site where the data was obtained.
 
-##Creating the tidy datafile
+###Creating the tidy datafile
 
-###Guide to create the tidy data file    
+###Guide to create the tidy data file
  1. Download zip file from above link with help of download.file () function.
- 2. Unzip file with unzip () function and set directory in working directory.   
+ 2. Unzip file with unzip () function and set directory in working directory.
 
-###Cleaning of the data
-Short, high-level description of what the cleaning script does. [link to the readme document that describes the code in greater detail]()    
+###The dataset includes the following files:
+
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training labels.
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test labels.
+
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
 ##Description of the variables in the tinyData.txt file
- - 180 observation of 68 variable.         
- - The format of dataset is wide.    
- - There are 30 subject who carried out the experiment.     
- - A 66-feature vector with time and frequency domain variables.      
+ **- Dimension :**180 observation of 68 variable.    
+ **-  Format :**The format of dataset is wide because every variable column is unique and give specific information.     
+ - There are 30 subject who carried out the experiment in first column.
+ - A 66-feature vector with time and frequency domain variables (not including subjectId and activityID). 
 
 
   [1]: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-  [2]: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
+  [2]: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
