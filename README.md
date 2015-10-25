@@ -33,16 +33,17 @@ In starting, script need to load all libraries for running code smoothly. I have
 
 **Merge Dataset:**
 
- - After read data, I use bind_cols (dplyr package) and rbind () for merging dataset. 
+ - After read data, I use bind_cols (dplyr package) and rbind () (base package) for merging dataset. 
  - Merge subject_test with y_train txt file together and assign to training object. Merge subject_test and y_test together and assign to testing object. I merge again testing and training object into mergeActivity object. 
  - Merge x_train and x_test file together according to rows and assign to mergeData.
- - I use variable name contain in feature.txt file as a column name of mergeData. I use rbind () function for performing this step.       
- - Original information of all text files , See Codebook.md    
+ - I use variable name contain in feature.txt file as a column name of mergeData. I use rbind () function for performing this step.                
+       
+**Note:** Original information of all text files , See Codebook.md    
 
 **Cleaning dataset:**
 
--	The column name of megeData have some error as typing wrong or repeated wording so I have use gsub () function for reduce this problem and make unique column name with the help !duplicated() function. 
--	Use [[:punct:]] regular expression with gsub () for remove any punctuation and also use tolower () function for removing case sensitive character in variable name. 
+-	The column name in megeData obeject have some error as typing wrong or repeated wording so I have used gsub () function for reduce this problem. For making unique variables, i used !duplicated() function. 
+-	Use [[:punct:]] regular expression with gsub () for remove any punctuation. 
 
 **Subsetting:**
 
@@ -50,15 +51,15 @@ In starting, script need to load all libraries for running code smoothly. I have
 
 **Transforming:**
 
--	I have summarize dataset according to group by activities column from mergerActivity object.
--	I have use sapply () for make all character variable to numeric variable because we want average of each activity so I need to set variable as numeric.  
+-	I have summarize dataset according to group by activityID column from mergerActivity object and for this, i have used factor () function as a set levels and labels of all activities. 
+-	I have use sapply () for make all character variable to numeric variable because we want average of each activity so I need to set variables as numeric.  
 
 **Tidy data:**
 
 -	Merge NewDataMerge dataset with mergeActivity dataset by column wise (bind_cols()) and you will get a tidy data but as per project guideline we want tidy data set with average of each variable for each activity and each subject.
--	I have used reshape2 (package) for making average of each variable for each activity and each subject. I used melt() function and dcast() function together with the help of pipeline operator in run_analyis.R script file. 
+-	I have used reshape2 (package) for making average of each variable for each activity and each subject. I used melt() function and dcast() function together with the help of pipeline operator in run_analyis.R script file.      
 
-Note : I request to reader and marker,  samsungData is final object so if you want check dataset, you can subset dataset with few rows and columns. Ex: sumsungData[1:5,1:5]. 
+**Note:**  I request to marker, I have submitted "tidyData.txt" file as a final output of this project in part1 sumission area. Kindly download attached file (tidyData.txt) and use read.table () function for see output result. (example: tidy <- read.table ("tidyData.txt", header = TRUE); header (tidy[,1:5])). 
 
 
 
