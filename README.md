@@ -16,10 +16,10 @@ Raw data -> Processing script -> tidy data -> data analysis -> data communicatio
 
 ###Way of working Script
 
-In starting, script need to load all libraries for running code smoothly. I have used 4 packages in script for run code and make pure tidy data from unprocessed raw data. The name of package is:
+In starting, script need to load all libraries for running code smoothly. I have used 3 packages in script for run code and make pure tidy data from unprocessed raw data. The name of package is:
 
  - dplyr            
- - data.table       
+ - data.table           
  - reshape2                                                            
 
  You can see original and download zip file link related raw dataset in Codebook.md file. I wrote some few steps in script file and these steps start from Read, merging data set, subsetting and extracting , cleaning and filtering duplicity,  transforming and lastly make pure tidy data set for ready to analysis. I have described above some underline principle of tidy data. Here, I briefly describe how these steps related to each other and these are:    

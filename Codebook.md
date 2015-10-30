@@ -56,7 +56,7 @@ The variable selected for this dataset come from the accelerometer from the Sams
 
 - 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
 
-###Description of the variables in the tinyData.txt file   
+###Description of the variables in the tidyData.txt file   
 
  - Dimension : 180 observation of 68 variable.    
  -  Format : The format of dataset is wide because every variable column is unique and give specific information.     
